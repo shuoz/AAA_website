@@ -1,7 +1,13 @@
 AAAWebsite::Application.routes.draw do
+  resources :comments
+
+  devise_for :users
+
+  resources :events
+
  #get "aaa_core/index"
 
-  match '/events', :to => 'aaa_core#events'
+#  match '/events', :to => 'aaa_core#events'
   match '/shop', :to => 'aaa_core#shop'
   match '/discussion', :to => 'aaa_core#discussion'
 
